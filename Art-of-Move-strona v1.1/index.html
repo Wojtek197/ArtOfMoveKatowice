@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8">
+	<title>Art of Move - jednym ruchem zmień swoje życie!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/et-line-font.css">
+	<link rel='stylesheet' href="css/font.css" type='text/css'>
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/default/default.css">
+   	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+   	<link rel="stylesheet" href="css/bxslider.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:800,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $SpacingX: 5,
+                $SpacingY: 5
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+<style>
+		
+		
+        /*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider arrow skin 106 css*/
+        .jssora106 {display:block;position:absolute;cursor:pointer;}
+        .jssora106 .c {fill:#fff;opacity:.3;}
+        .jssora106 .a {fill:none;stroke:#000;stroke-width:350;stroke-miterlimit:10;}
+        .jssora106:hover .c {opacity:.5;}
+        .jssora106:hover .a {opacity:.8;}
+        .jssora106.jssora106dn .c {opacity:.2;}
+        .jssora106.jssora106dn .a {opacity:1;}
+        .jssora106.jssora106ds {opacity:.3;pointer-events:none;}
+
+        /*jssor slider thumbnail skin 101 css*/
+        .jssort101 .p {position: absolute;top:0;left:0;box-sizing:border-box;background:#000;}
+        .jssort101 .p .cv {position:relative;top:0;left:0;width:100%;height:100%;border:2px solid #000;box-sizing:border-box;z-index:1;}
+        .jssort101 .a {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;visibility:hidden;}
+        .jssort101 .p:hover .cv, .jssort101 .p.pdn .cv {border:none;border-color:transparent;}
+        .jssort101 .p:hover{padding:2px;}
+        .jssort101 .p:hover .cv {background-color:rgba(0,0,0,6);opacity:.35;}
+        .jssort101 .p:hover.pdn{padding:0;}
+        .jssort101 .p:hover.pdn .cv {border:2px solid #fff;background:none;opacity:.35;}
+        .jssort101 .pav .cv {border-color:#fff;opacity:.35;}
+        .jssort101 .pav .a, .jssort101 .p:hover .a {visibility:visible;}
+        .jssort101 .t {position:absolute;top:0;left:0;width:100%;height:100%;border:none;opacity:.6;}
+        .jssort101 .pav .t, .jssort101 .p:hover .t{opacity:1;}
+		
+</style>
+
+<section  class="preloader">
+	<div class="sk-rotating-plane"></div>
+</section>
+
+<!-- Menu -->
+<section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#home" class="smoothScroll navbar-brand">ART OF MOVE</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">               
+				<li><a href="#o-nas" class="smoothScroll">O NAS</a></li>
+				<li><a href="#about" class="smoothScroll">NASZE ZAJĘCIA</a></li>
+				<li><a href="#team" class="smoothScroll">NASI TRENERZY</a></li>
+				<li><a href="#galeria" class="smoothScroll">NASZE PRZEMIANY</a></li>
+				<li><a href="#plan" class="smoothScroll">OFERTA</a></li>
+				<li><a href="#multimedia" class="smoothScroll">DOJAZD</a></li>
+				<li><a href="#contact" class="smoothScroll">KONTAKT</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Slider -->
+<div id="home">
+	<div class="site-slider">
+        <ul class="bxslider">
+			<li>
+                <img src="images/slider/slide1.jpg" alt="slider image 1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide2.jpg" alt="slider image 3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="slider-caption">
+                                <h2>Art of Move</h2>
+                                <p class="color-white">To wyjątkowe miejsce!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide3.jpg" alt="slider image 3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="slider-caption">
+                                <h2>To tu w kameralnej atmosferze</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide4.jpg" alt="slider image 4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                                <h2>Pod czujnym okiem specjalistów</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide5.jpg" alt="slider image 5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                                <h2>Popracujesz nad swoją formą</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul> <!-- /.bxslider -->
+        <div class="bx-thumbnail-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="bx-pager">
+                            <a data-slide-index="0" href=""><img src="images/slider/thumb1.jpg" alt="thumbnail 1" /></a>
+                            <a data-slide-index="1" href=""><img src="images/slider/thumb2.jpg" alt="thumbnail 2" /></a>
+                            <a data-slide-index="2" href=""><img src="images/slider/thumb3.jpg" alt="thumbnail 3" /></a>
+                            <a data-slide-index="3" href=""><img src="images/slider/thumb4.jpg" alt="thumbnail 4" /></a>
+                            <a data-slide-index="4" href=""><img src="images/slider/thumb5.jpg" alt="thumbnail 5" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- O nas  -->
+<section id="o-nas" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">TROCHĘ O NAS</h5>
+					<h1 class="heading">CZYM SIĘ ZAJMUJEMY</h1>
+					<hr>
+					<p>Studio treningu personalnego Art of move to wyjątkowe miejsce, gdzie w
+					kameralnej atmosferze, pod czujnym okiem specjalistów popracujesz nad swoją
+					formą !!!</p>
+					<h1 class="heading">CHCESZ</h1>
+					<br><b>poprawić swoją sylwetkę?
+					<br>spalić tkankę tłuszczową i zbudować mięśnie?
+					<br>popracować nad ogólną sprawnością fizyczną?
+					<br>zwiększyć mobilność i elastyczność całego ciała?</b>
+					<hr>
+					<h1>Świetnie trafiłeś!</h1> 
+					<p>Zapewniamy indywidualne podejście do każdego klienta
+					poprzez dobranie optymalnego programu treningowego, doradztwo z zakresu
+					dietetyki oraz dbałość o bezpieczeństwo i minimalizowanie ryzyka kontuzji.
+					Umów się na bezpłatne konsultacje, wraz z analizą składu ciała przy użyciu
+					profesjonalnej wagi do pomiaru poziomu tkanki tłuszczowej!</p>
+					<h1 class="heading">A MOŻE CHCESZ CZUĆ SIĘ BEZPIECZNIEJ NA ULICY?</h1>
+					<br><b>Żaden problem!</b>
+					<p>W Art of Move oferujemy także treningi samoobrony, zatem jeśli chcesz czuć się bezpiecznie na ulicy, 
+					nauczyć się jak radzić sobie w sytuacji zagrożenia albo poznać podstawy boksu, kickboxingu oraz walki w zwarciu</p>
+					<h1><b>Zapraszamy!</b></h1>
+					<p>Bezpośrednia praca pod okiem instruktora z ponad 20 letnim doświadczeniem
+					w sztukach walki da Ci szybkie efekty i gwarantuje bezpieczną formę nauki.</p.
+				</div>
+			</div>
+
+			<!-- Swype -->
+			<div id="owl-work" class="owl-carousel">
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+					<i class="icon-heart medium-icon"></i>
+						<h3>OPIEKA</h3>
+						<hr>
+						<p>Doskonała opieka nad każdym z podopiecznych, indywidualny grafik diety i ćwiczeń odpowiednio dobrany do trybu życia, możliwości i umiejętności</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<i class="icon-calendar medium-icon"></i>
+						<h3>KAMERALNA ATMOSFERA</h3>
+						<hr>
+						<p>Praca pod czujnym okiem instruktora, dbałość o bezpieczeństwo i komfort treningu to podstawa</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<i class="icon-profile-male medium-icon"></i>
+					<i class="icon-profile-female medium-icon"></i>
+						<h3>TRENUJ WSPÓLNIE</h3>
+						<hr>
+						<p>Jeśli masz swojego partnera/partnerkę treningową zapraszamy do
+						treningu w parach w promocyjnej cenie</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<i class="icon-wallet medium-icon"></i>
+						<h3>ATRAKCYJNE CENY</h3>
+						<hr>
+						<p>Oprócz pojedyńczych treningów oferujemy także pakiety treningowe. Im dłużej trenujesz, tym więcej zyskujesz!</p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- Zajecia -->
+<section id="about" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<h5 class="heading" align="center">NASZE ZAJĘCIA</h5>
+			<hr>
+			<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:600px;overflow:hidden;visibility:hidden;">
+				<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+					<img alt="spin" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg"/>
+				</div>
+				<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:600px;overflow:hidden;">
+					<div>
+						<img alt="zajecia1" data-u="image" src="images/gallery-1.jpg" />
+					</div>
+					<div>
+						<img alt="zajecia2" data-u="image" src="images/gallery-2.jpg" />
+					</div>
+					<div>
+						<img alt="zajecia3" data-u="image" src="images/gallery-3.jpg" />
+					</div>
+					<div>
+						<img alt="zajecia4" data-u="image" src="images/gallery-4.jpg" />
+					</div>
+					<div>
+						<img alt="zajecia5" data-u="image" src="images/gallery-5.jpg" />
+					</div>			
+				</div>
+				<!-- Arrow Navigator -->
+				<div data-u="arrowleft" class="jssora106" style="width:55px;height:55px;top:262px;left:30px;" data-scale="0.75">
+					<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+						<circle class="c" cx="8000" cy="8000" r="6260.9"></circle>
+						<polyline class="a" points="7930.4,5495.7 5426.1,8000 7930.4,10504.3 "></polyline>
+						<line class="a" x1="10573.9" y1="8000" x2="5426.1" y2="8000"></line>
+					</svg>
+				</div>
+				<div data-u="arrowright" class="jssora106" style="width:55px;height:55px;top:262px;right:30px;" data-scale="0.75">
+					<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+						<circle class="c" cx="8000" cy="8000" r="6260.9"></circle>
+						<polyline class="a" points="8069.6,5495.7 10573.9,8000 8069.6,10504.3 "></polyline>
+						<line class="a" x1="5426.1" y1="8000" x2="10573.9" y2="8000"></line>
+					</svg>
+				</div>
+			</div>
+			<h5 class="wow bounceIn" align="center">Podoba się? Przyjdź i sprawdź!</h1>
+			
+			<script type="text/javascript">jssor_1_slider_init();
+			</script>
+		</div>
+	</div>
+</section>
+
+<!-- Kadra trenerska -->
+<section id="team" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">NASZA KADRA</h5>
+					<h1 class="heading">POZNAJCIE NAS</h1>
+					<hr>
+					<p>Studio treningu personalnego Art of move to wyjątkowe miejsce zrodzone z
+					pasji i miłości do sportu dwojga ludzi.
+					<br>Ze sportem jesteśmy związani od dziecka, a nasza wiedza i doświadczenie
+					wykraczają daleko poza to, czego można się dowiedzieć na kursach trenera
+					personalnego. To głębokie zrozumienie zasad funkcjonowania ludzkiego ciała,
+					jego siły i słabości, a także prawdziwa pasja, która da Ci motywację aby zmienić
+					siebie na lepsze!
+					Skorzystaj z naszych doświadczeń, aby szybko i bezpiecznie uzyskać zamierzony
+					cel !!!</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="team-wrapper">
+					<img src="images/team1.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Kamila Leszczyńska</h4>
+							<h3>Trenerka z 19 letnim doświadczeniem w sporcie
+							wyczynowym i amatorskim. Była Wicemistrzyni Polski Juniorów w łyżwiarstwie
+							figurowym, obecnie zawodniczka pole dance. Uprawia również akrobatykę i
+							street workout, specjalistka od stretchingu</h3>
+							<ul class="social-icon">
+								<li><a target="_blank" href="https://www.facebook.com/Kamila-Leszczy%C5%84ska-trener-personalnypole-dancer-397343817791328/" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a target="_blank" href="https://www.instagram.com/kamila_les/?hl=pl" class="fa fa-instagram wow fadeIn" data-wow-delay="0.6"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="1.3s">
+				<div class="team-wrapper">
+					<img src="images/team2.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Sławomir Morawski</h4>
+							<h3>Sportowiec z ponad 25 letnim stażem treningowym, od
+							2007 roku pracujący jako trener. Pasjonat sztuk walki, akrobatki i street
+							workout.</h3>
+							<ul class="social-icon">
+								<li><a href="https://www.facebook.com/SlawomirMorawskiTrener/" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="http://www.instagram.com" class="fa fa-instagram wow fadeIn" data-wow-delay="0.6"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- Galeria klientów -->
+<section id="galeria" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h1 class="heading">NASI KLIENCI</h1>
+					<hr>
+					<p>Poznajcie naszych klientów i zobaczcie efekty ich pracy z naszymi trenerami</p>
+				</div>
+			</div>
+			
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			  <div class="numbertext">1 / 2</div>
+			  <img src="images/galeria1.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 2</div>
+			  <img src="images/galeria2.jpg" style="width:100%">
+			</div>
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+		
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+            	<div class="galeria-bottom">
+            		<h1>Zainteresowany współpracą?</h2>
+					<h5 class="wow bounceIn">ZACHĘCAMY DO SPRAWDZENIA NASZEJ OFERTY</p>
+					<a href="#plan" class="smoothScroll btn btn-default">SZCZEGÓŁY PONIŻEJ</a>
+            	</div>
+            </div>
+		</div>
+	</div>
+</section>
+
+<!-- Plany -->
+<section id="plan" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 wow fadeInUp">
+				<div class="section-title">
+					<h5 class="wow bounceIn">CENNIK</h5>
+					<h1 class="heading color-white">JUŻ DZIŚ ZACZNIJ SWOJĄ PRZYGODĘ</h1>
+					<hr>
+					<p class="color-white"><b>Oferujemy 2 możliwości - samoobrona i treningi personalne 🔥🔥🔥🔥</b></p>
+				</div>
+			</div>
+			
+			<div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+				<div class="plan">
+					<h2 class="plan-title">SAMOOBRONA</h2>
+					<div class="plan-price">
+						<h1 class="plan-price-title">100 zł / <small>1h (dorośli)</small></h1>
+						<h1 class="plan-price-title">80 zł / <small>1h (dzieci i młodzież)</small></h1>
+						<h1 class="plan-price-title">120 zł / <small>1h dla pary</small></h1>
+					</div>
+					<ul class="plan-list">
+						<p>Indywidualne treningi z samoobrony pozwolą Ci w komfortowy i dostosowany
+						do Twoich potrzeb i możliwości sposób nauczyć się podstaw walki wręcz oraz
+						umiejętności radzenia sobie w sytuacji zagrożenia.</p>
+						<h1>Treningi z samoobrony nauczą Cię:</h1>
+						<li>Zachowania w momencie zagrożenia</li>
+						<li>Odparcia ewentualnego ataku</li>
+						<li>Podstaw uderzeń ręcznych i kopnięć (boks, kickboxing)</li>
+						<li>Techniki i zasady walki w zwarciu</li>
+						<li>Różnic między walką sportową a uliczną</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+				<div class="plan">
+					<h2 class="plan-title">TRENING PERSONALNY</h2>
+					<div class="plan-price">
+						<h1 class="plan-price-title">0 zł!!! / <small>Pierwsza konsultacja</small></h1>
+						<h1 class="plan-price-title">120 zł / <small>1 trening</small></h1>
+						<h1 class="plan-price-title">550 zł / <small>5 treningów</small></h1>
+						<h1 class="plan-price-title">1000 zł / <small>10 treningów</small></h1>
+					</div>
+					<ul class="plan-list">
+						<p>Trening personalny to zoptymalizowanie metody treningowej pod kątem
+						konkretnej osoby. Dobrany ze szczególną uwagą i starannością pozwala
+						osiągnąć maksymalny efekt dopasowany do możliwości osoby ćwiczącej.</p>
+						<h1>W ramach treningu personalnego możemy realizować różnorodne cele:</h1>
+						<li>Budowę masy mięśniowej</li>
+						<li>Zwiększenie siły mięśni</li>
+						<li>Redukcję masy ciała czyli wspomaganie odchudzania</li>
+						<li>Poprawę mobilności, gibkości i ogólnej sprawności fizycznej</li>
+						<li>Powrót do sprawności po przebytym urazie, kontuzji, chorobie</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- Mapa -->
+<section id="multimedia" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<h1 class="heading" align="center">GDZIE NAS ZNALEŹĆ</h1>
+			<p align="center">ul.Bażantów 41B/4 40-668 Katowice</p>
+			
+			<center><div id="map" style="width: 550px; height: 550px;"></div></center>
+			<script>
+			mapboxgl.accessToken = 'pk.eyJ1Ijoid29qdGVrMTk5NyIsImEiOiJjanN3MWFrb2swOGFlNDl0M3dlYmVhdHdmIn0.OtTY_m4PQtFvNgt9Kf23BA';
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [18.989439, 50.199970],
+			zoom: 17
+			});
+			map.addControl(new mapboxgl.NavigationControl());
+			</script>
+		</div>
+	</div>
+</section>
+<!-- Kontakt -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+					<h5 class="wow bounceIn">ZAINTERESOWANY NASZĄ OFERTĄ?</h5>
+					<h1 class="heading">ZAPRASZAMY DO KONTAKTU Z NAMI!</h1>
+			</div>
+			
+			<div class="contact-detail col-md-12 col-sm-12">
+				<div class="col-md-4 col-sm-4">
+					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i>EMAIL</h3>
+					<p>aom.treningi@gmail.com</p>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i>TELEFON</h3>
+					<p>609 436 774 / 517 171 071</p>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<h3><i class="icon-map medium-icon wow bounceIn" data-wow-delay="0.6s"></i>ADRES</h3>
+					<p>ul.Bażantów 41B/4 40-668 Katowice</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- Stopka -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+
+				<p>Copyright by Wojciech Mikina 2020 </p>
+				<ul class="social-icon">
+				<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100042022463327" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/in/wojciech-mikina-72a199195/" class="fa fa-linkedin wow fadeIn" data-wow-delay="0.6"></a></li>
+				<li><a target="_blank" href="https://www.instagram.com/wojtekmikina/?hl=pl" class="fa fa-instagram wow fadeIn" data-wow-delay="0.6"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/jquery.easing-1.3.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+
+</html>
